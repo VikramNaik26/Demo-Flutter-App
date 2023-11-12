@@ -393,7 +393,7 @@ class _HomePageState extends State<HomePage> {
       ),
       centerTitle: true,
       backgroundColor: Colors.white,
-      elevation: 0.0, // removes the elevation (shadow)
+      elevation: 0, // removes the elevation (shadow)
       leading: GestureDetector(
         onTap: () {},
         child: Container(
@@ -413,17 +413,22 @@ class _HomePageState extends State<HomePage> {
       actions: [
         GestureDetector(
           onTap: () {},
-          child: Container(
-            margin: const EdgeInsets.all(10),
-            alignment: Alignment.center,
-            width: 37,
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
-            child: SvgPicture.asset(
-              'assets/icons/dots.svg',
-              height: 5,
-              width: 5,
-            ),
+          child: Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(10),
+                alignment: Alignment.center,
+                width: 37,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                child: SvgPicture.asset(
+                  'assets/icons/dots.svg',
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ],
           ),
         )
       ],
